@@ -1,11 +1,256 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Luyện tập các thẻ HTML cơ bản CatPhotoApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            color: #000000;
+            line-height: 1.5;
+        }
+        h1 { font-size: 28px; margin-bottom: 5px; }
+        h2 { font-size: 20px; margin-top: 25px; margin-bottom: 10px; color: #333333; }
+        p { margin-bottom: 10px; font-size: 15px; }
+        a { color: #0066cc; text-decoration: underline; }
+        ul, ol { margin-left: 20px; margin-bottom: 15px; font-size: 15px; }
+        li { margin-bottom: 4px; }
+        .top-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 900px;
+        }
+        .text-part { flex: 1; }
+        .cat-group-img {
+            max-width: 350px;
+            height: auto;
+            border-radius: 4px;
+            margin-left: 20px;
+        }
+        .food-img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 4px;
+            margin: 15px 0;
+        }
+        table {
+            width: 100%;
+            max-width: 900px;
+            border-collapse: collapse;
+            margin-top: 15px;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        th, td {
+            border: 1px solid #767676;
+            padding: 8px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        td.breed-name {
+            font-weight: bold;
+            color: #0066cc;
+        }
+        .table-thumb {
+            width: 60px;
+            height: 60px;
+            object-fit: cover;
+            border-radius: 2px;
+            display: block;
+            margin: 0 auto;
+        }
+        .form-border-box {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 20px;
+            max-width: 500px;
+            border-radius: 6px;
+            margin-bottom: 30px;
+        }
+        .form-section {
+            margin-bottom: 15px;
+        }
+        .form-section label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        .radio-checkbox-options label {
+            display: inline-flex;
+            align-items: center;
+            font-weight: normal;
+            margin-right: 15px;
+            cursor: pointer;
+        }
+        .radio-checkbox-options input {
+            margin-right: 5px;
+        }
+        .submit-group {
+            display: flex;
+            max-width: 400px;
+            margin-top: 15px;
+        }
+        .submit-group input[type="text"] {
+            flex: 1;
+            padding: 6px 10px;
+            border: 1px solid #767676;
+            border-right: none;
+            outline: none;
+        }
+        .submit-group button {
+            padding: 6px 20px;
+            background-color: #e0e0e0;
+            border: 1px solid #767676;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .submit-group button:hover {
+            background-color: #d5d5d5;
+        }
+        footer {
+            font-size: 14px;
+            margin-top: 40px;
+            color: #333;
+            border-top: 1px solid #eee;
+            padding-top: 15px;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>CatPhotoApp</h1>
+    <div class="top-content">
+        <div class="text-part">
+            <h2>Cat Photos</h2>
+            <p>Everyone loves <a href="#">cute cats</a> online!</p>
+            <p>See more <a href="#">cat photos</a> in our gallery.</p>
+             <img 
+       width="250"
+    src="https://www.shutterstock.com/image-photo/maine-coon-kitten-front-spring-600w-2384361187.jpg" 
+    alt="">
+            <h2>Cat Lists</h2>
+            <p>Things cats love:</p>
+            <ul>
+                <li>cat nip</li>
+                <li>laser pointers</li>
+                <li>lasagna</li>
+            </ul>
+            <img class="food-img" src="https://beptruong.edu.vn/wp-content/uploads/2017/12/mon-lasagna-truyen-thong.jpg" alt="Món lasagna">
+            <p>Top 3 things cats hate:</p>
+            <ol>
+                <li>flea treatment</li>
+                <li>thunder</li>
+                <li>other cats</li>
+                <img 
+             width="250"
+        src="https://www.shutterstock.com/shutterstock/photos/2057077742/display_1500/stock-photo-row-of-various-colored-british-shorthair-cat-kittens-standing-and-sitting-together-all-facing-2057077742.jpg" alt="">
+                <h4>Cats hate other cats</h4>
+             </ol>
+        </div>
+        <div>
+            <img class="cat-group-img" src="https://en.wikipedia.org/wiki/Cat" alt="Nhóm mèo">
+            <p style="font-size: 12px; text-align: center; color: #555; margin-top: 5px;">Cats hate other cats.</p>
+        </div>
+    </div>
+    <h2>Cat Breed</h2>
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Breed</th>
+                <th colspan="2">Location of origin</th>
+                <th rowspan="2">Type</th>
+                <th rowspan="2">Body type</th>
+                <th rowspan="2">Coat type and length</th>
+                <th rowspan="2">Coat pattern</th>
+                <th rowspan="2">Image</th>
+            </tr>
+            <tr>
+                <th colspan="2">Location</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="breed-name">Abyssinian<sup>[8]</sup></td>
+                <td colspan="2">Unspecified, but somewhere in Afro-Asia, likely Ethiopia<sup>[9]</sup></td>
+                <td>Natural</td>
+                <td>Semi-foreign</td>
+                <td>Short</td>
+                <td>Ticked tabby</td>
+                <td><img class="table-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9b/Gustav_chocolate.jpg/500px-Gustav_chocolate.jpg" alt="Mèo Abyssinian"></td>
+            </tr>
+            <tr>
+                <td class="breed-name">Aegean</td>
+                <td colspan="2">Greece</td>
+                <td>Natural</td>
+                <td>Moderate</td>
+                <td>Semi-long</td>
+                <td>Multi-color</td>
+                <td><img class="table-thumb" src="https://upload.wikimedia.org/wikipedia/commons/9/96/Aegean_Island_Cat.jpg" alt="Mèo Aegean"></td>
+            </tr>
+            <tr>
+                <td class="breed-name">American Bobtail<sup>[10]</sup></td>
+                <td colspan="2">United States<sup>[11]</sup></td>
+                <td>Mutation of shortened tail</td>
+                <td>Cobby</td>
+                <td>Semi-long</td>
+                <td>All</td>
+                <td><img class="table-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/American_bobtail_2.jpg/500px-American_bobtail_2.jpg" alt="Mèo American Bobtail"></td>
+            </tr>
+            <tr>
+                <td class="breed-name">American Curl<sup>[12]</sup></td>
+                <td colspan="2">United States<sup>[11]</sup></td>
+                <td>Mutation</td>
+                <td>Semi-foreign</td>
+                <td>Semi-long</td>
+                <td>All</td>
+                <td><img class="table-thumb" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/17/American_curl_2.jpg/500px-American_curl_2.jpg" alt="Mèo American Curl"></td>
+            </tr>
+            <tr>
+                <td class="breed-name">American Wirehair</td>
+                <td colspan="2">United States<sup>[11]</sup></td>
+                <td>Mutation</td>
+                <td>Foreign</td>
+                <td>Semi-long</td>
+                <td>All</td>
+                <td><img class="table-thumb" src="https://upload.wikimedia.org/wikipedia/commons/7/7f/American_Wirehair_-_CFF_cat_show_Heinola_2008-05-04_IMG_8721.JPG" alt="Mèo American Wirehair"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>Cat Form</h2>    
+    <div class="form-border-box">
+        <form action="#" method="POST">
+            <div class="form-section">
+                <label>Is your cat an indoor or outdoor cat?</label>
+                <div class="radio-checkbox-options">
+                    <label><input type="radio" name="cat-type" value="indoor" checked> Indoor</label>
+                    <label><input type="radio" name="cat-type" value="outdoor"> Outdoor</label>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <label>What's your cat's personality?</label>
+                <div class="radio-checkbox-options">
+                    <label><input type="checkbox" name="personality" value="loving" checked> Loving</label>
+                    <label><input type="checkbox" name="personality" value="lazy"> Lazy</label>
+                    <label><input type="checkbox" name="personality" value="energetic"> Energetic</label>
+                </div>
+            </div>
+
+            <div class="submit-group">
+                <input type="text" placeholder="cat photo URL" required>
+                <button type="submit">Submit</button>
+            </div>
+        </form>
+    </div>
+    <footer>
+        No Copyright - <a href="https://rikkei.edu.vn/" target="_blank">rikkei.edu.vn</a>
+    </footer>
 </body>
 </html>
